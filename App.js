@@ -1,24 +1,7 @@
-import React from 'react'
-import { createAppContainer } from 'react-navigation'
-import { createStackNavigator } from 'react-navigation-stack'
-import Landing from './src/assets/Landing'
-import Login from './src/assets/Login'
-import Register from './src/assets/Register'
+import React, {Component} from 'react'
+import Navigator from './src/routes/Navigator'
 
-const Map = createStackNavigator(
-  {
-    Landing: { screen: Landing },
-    Login: { screen: Login },
-    Register: { screen: Register },
-  },
-  {
-    initialRouteName: 'Landing',
-  }
-)
-
-const Navigator = createAppContainer(Map)
-
-class App extends React.Component {
+class App extends Component {
   render() {
     return <Navigator />
   }
